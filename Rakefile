@@ -6,6 +6,10 @@ PuppetLint.configuration.send('relative')
 PuppetLint.configuration.send('disable_documentation')
 PuppetLint.configuration.send('disable_single_quote_string_with_variables')
 
+spec = Gem::Specification.find_by_name 'gettext-setup'
+load "#{spec.gem_dir}/lib/tasks/gettext.rake"
+GettextSetup.initialize(File.absolute_path('locales', File.dirname(__FILE__)))
+
 desc 'Generate pooler nodesets'
 task :gen_nodeset do
   require 'beaker-hostgenerator'

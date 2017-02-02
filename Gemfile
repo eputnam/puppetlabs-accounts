@@ -34,7 +34,7 @@ group :development do
   gem 'puppet-lint',                        :require => false
   gem 'metadata-json-lint',                 :require => false, :platforms => 'ruby'
   gem 'puppet_facts',                       :require => false
-  gem 'puppet-blacksmith', '>= 3.4.0',      :require => false, :platforms => 'ruby'
+  gem 'puppet-blacksmith', '3.4.1',      :require => false, :platforms => 'ruby'
   gem 'puppetlabs_spec_helper', '>= 1.2.1', :require => false
   gem 'rspec-puppet', '>= 2.3.2',           :require => false
   gem 'rspec-puppet-facts',                 :require => false, :platforms => 'ruby'
@@ -49,6 +49,7 @@ group :development do
   gem 'json_pure', '<= 2.0.1',              :require => false if Gem::Version.new(RUBY_VERSION.dup) < Gem::Version.new('2.0.0')
   gem 'fast_gettext', '1.1.0',              :require => false if Gem::Version.new(RUBY_VERSION.dup) < Gem::Version.new('2.1.0')
   gem 'fast_gettext',                       :require => false if Gem::Version.new(RUBY_VERSION.dup) >= Gem::Version.new('2.1.0')
+  gem 'gettext-setup'
 end
 
 group :system_tests do

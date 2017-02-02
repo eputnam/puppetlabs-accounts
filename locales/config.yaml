@@ -1,0 +1,4 @@
+gettext:
+  project_name: 'puppetlabs-accounts'
+  source_files:
+    - 'test.rb'
